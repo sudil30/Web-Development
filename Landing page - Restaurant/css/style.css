@@ -1,0 +1,312 @@
+/* Font imports */
+@import url('https://fonts.googleapis.com/css2?family=Outfit&family=Quicksand&family=Yanone+Kaffeesatz:wght@500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Corinthia:wght@700&family=Outfit&family=Quicksand&family=Yanone+Kaffeesatz:wght@500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bitter&family=Corinthia:wght@700&family=Lobster&family=Outfit&family=Quicksand&family=Yanone+Kaffeesatz:wght@500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    --lightbg: rgb(170, 202, 202);
+    scroll-behavior: smooth;
+}
+
+/* Navigation bar */
+#navbar{
+    display: flex;
+    align-items: center;
+    padding: 0px 40px 0px 0px;
+    margin: 0 auto;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    
+}
+#navbar::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.7;
+    z-index: -1;
+}
+
+/* navleft contains logo */
+.navleft{
+    display: flex;
+    align-items: center;
+    padding: 5px 0px;
+    color: white;
+}
+#logo{
+    height: 50px;
+    padding-left: 40px;
+}
+#name{
+    width: 76px;
+    font-family: 'Corinthia', cursive;
+    font-size: 1.3rem;
+    text-align: center;
+    align-items: center;
+}
+
+/* nav menu */
+nav ul{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding-right: 20px;
+}
+nav ul li{
+    list-style: none;
+    font-family: 'Quicksand', sans-serif;
+}
+nav ul li a{
+    text-decoration: none;
+    display: flex;
+    height: 60px;
+    font-size: 1.2rem;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px;
+    color: white;
+}
+nav ul li a:hover{
+    color: black;
+    background-color: var(--lightbg);
+}
+nav ul li a:active{
+    font-weight: bold;
+}
+
+/* Home section */
+#home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 800px;
+    width: auto;
+}
+#home::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    min-height: 800px;
+    width: 100%;
+    background: url('../img/home.jpg') no-repeat center center/cover;
+    opacity: 1;
+    z-index: -2;
+    
+}
+#home .box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height:90vh;
+    width: 600px;
+    font-family: 'Bitter', serif;
+}
+#home .box::before{
+    content: "";
+    position:absolute;
+    /* top: 90px; */
+    min-height: 500px;
+    margin-top: 50px;
+    width: 650px;
+    background-color: white;
+    opacity: 0.8;
+    z-index: -1;
+}
+.box h1{
+    margin-top: 90px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+.box div{
+    font-size: 1.5rem;
+    font-weight: 100;
+    text-align: center;
+}
+.box button{
+    margin: 50px;
+    padding: 10px 20px;
+    background-color: crimson;
+    font-size: 15px;
+    font-family: 'Quicksand', sans-serif;
+    /* font-weight: 900; */
+    border: none;
+    color: white;
+}
+.box button:hover{
+    background-color: black;
+    cursor: pointer;
+}
+
+/* Services section */
+#services{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(238, 237, 237);
+    flex-wrap: wrap;
+    font-family: 'Bitter', serif;
+    padding-top: 40px;
+    padding-bottom: 70px;
+}
+#services-heading{
+    flex: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    font-size: 25px;
+}
+/* dont know why two divs were necessary */
+.service{
+    flex: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    width: 50%;
+}
+.service-box{
+    display: flex;
+    background-color: rgb(41, 40, 40);
+    color: white;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    padding: 60px;
+    margin: 20px;
+    height: 300px;
+    text-align: center;
+    border: rgb(158, 184, 184) 2px;
+    border-style:outset;
+}
+.service-box h2{
+    background-color: crimson;
+    padding: 3px 9px;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 30px;
+}
+
+/* Location section */
+#location{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Quicksand', sans-serif;
+    padding: 120px 10px;
+    border-bottom: solid 4px rgb(170, 169, 169);
+    border-top: solid 4px rgb(170, 169, 169);
+}
+#location .telephone{
+    font-size: 30px;
+    text-align: center;
+}
+
+/* Contact section */
+#contact{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Quicksand', sans-serif;
+}
+/* phone number */
+#contact #phone{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 10px;
+    margin: 20px 0px;
+    text-align: center;
+}
+p.telephone{
+    font-size: 50px;
+    font-weight: 900;
+    padding-top: 20px;
+    text-align: center;
+}
+/* contact form */
+#form{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(238, 237, 237);
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+#form p{
+    margin-bottom: 20px;
+}
+.left-form{
+    display: inline-flex;
+    flex-flow: column;
+    margin-right: 10px;
+}
+.left-form input{
+    width: 400px;
+    padding: 10px 5px;
+    margin-bottom: 20px;
+    font-family: 'Quicksand', sans-serif;
+}
+.right-form{
+    display: inline-flex;
+    flex-flow: column;
+    margin-left: 10px;
+    align-items: center;
+}
+.right-form textarea{
+    width: 400px;
+    padding: 12px 10px;
+    height: 131px;
+    margin-bottom: 20px;
+}
+.right-form input{
+    width: 160px;
+    padding: 4px 20px;
+    border-radius: 0;
+    cursor: pointer;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 25px;
+    background-color: crimson;
+    color: white;
+    border: none;
+}
+.right-form input:hover{
+    background-color: black;
+}
+
+/* footer section */
+footer{
+    display: flex;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    padding: 20px 10px;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    box-shadow: 2px 2px 2px rgba(0,0,0,.1);
+}
+.social a img{
+    height: 50px;
+    margin: 10px;
+}
+.social a img:hover{
+    height: 55px;
+    margin-bottom: 5px;
+    margin-left: 7.5px;
+    margin-right: 7.5px;
+}
